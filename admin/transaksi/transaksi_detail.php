@@ -64,12 +64,14 @@ if (isset($_POST['submit'])) {
 		?>
 		<script type="text/javascript">
 			alert("Data Terupdate");
+			location.reload();
 		</script>
 		<?php
 	} else {
 		?>
 		<script type="text/javascript">
 			alert("Gagal Update");
+			location.reload();
 		</script>
 		<?php
 	}
