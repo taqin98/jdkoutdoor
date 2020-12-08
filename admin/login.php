@@ -79,7 +79,7 @@ if (isset($_SESSION["admin"]))
           	<form method="POST">
           		<div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           			<input class="mdl-textfield__input" type="text" name="user" placeholder="Username">
-          			<label class="mdl-textfield__label" for="sample3">Username</label>
+          			<label class="mdl-textfield__label" for="sample3">Usernamex</label>
           		</div>
           		<div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           			<input class="mdl-textfield__input" type="password" name="pass" placeholder="Password">
