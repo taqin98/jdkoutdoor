@@ -79,7 +79,7 @@ if (isset($_SESSION["admin"]))
           	<form method="POST">
           		<div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           			<input class="mdl-textfield__input" type="text" name="user" placeholder="Username">
-          			<label class="mdl-textfield__label" for="sample3">Usernamex</label>
+          			<label class="mdl-textfield__label" for="sample3">Username</label>
           		</div>
           		<div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           			<input class="mdl-textfield__input" type="password" name="pass" placeholder="Password">
@@ -105,31 +105,32 @@ if (isset($_SESSION["admin"]))
 
 		//menghitung akun yang terambil
     	$num = $ambil->num_rows;
-      $akun = $ambil->fetch_assoc();
-      var_dump($akun);
+
 		//jika 1 akun yang cocok, maka diloginkan
-   //  	if ($num==1)
-   //  	{
-   //  		$akun = $ambil->fetch_assoc();
-   //  		$_SESSION["admin"] = $akun;
+    	if ($num==1)
+    	{
+    		$akun = $ambil->fetch_assoc();
+    		$_SESSION["admin"] = $akun;
     		
-   //  		if ($akun['level'] == 1) {
-   //  			# code...
-   //  			echo "<script>alert('anda sukses login');</script>";
-   //  			echo "<script>location='index.php';</script>";
+    		if ($akun['level'] == 1) {
+    			# code...
+    			echo "<script>alert('anda sukses login');</script>";
+    			echo "<script>location='index.php';</script>";
 
-   //  		} else {
-   //  			echo "Gagal";
-   //  		}
+    		} else {
+    			echo "Gagal";
+    		}
     		
 
-   //  	}
-   //  	else
-   //  	{
-			// //anda gagal login
-   //  		echo "<script>alert('anda gagal login, periksa akun anda');</script>";
-   //  		echo "<script>location='login.php';</script>";
-   //  	}
+    	}
+    	else
+    	{
+			//anda gagal login
+        $akun = $ambil->fetch_assoc();
+      var_dump($akun);
+    		// echo "<script>alert('anda gagal login, periksa akun anda');</script>";
+    		// echo "<script>location='login.php';</script>";
+    	}
     }
 
     ?>
