@@ -7,6 +7,7 @@ $data_users = $users->fetch_assoc();
 
 
 ?>
+<a href="?halaman=transaksi" class="mdl-button mdl-color--orange-400 mdl-color-text--white mdl-cell mdl-cell--2-col">Kembali</a>
 <div style="display: flex;">
 	<table border="0" class="mdl-cell mdl-cell--6-col" style="float: left;">
 	<tr>
