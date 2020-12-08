@@ -81,6 +81,7 @@ if (isset($_POST['submit'])) {
 
 <table class="mdl-cell mdl-data-table mdl-cell--12-col">
 	<tr bgcolor="orange">
+		<td>Bukti Foto</td>
 		<td>Kode Produk</td>
 		<td>Nama Produk</td>
 		<td>Harga Produk</td>
@@ -96,6 +97,19 @@ if (isset($_POST['submit'])) {
 
 		?>
 		<tr>
+			<td>
+				<?php 
+				if ($data_users['bukti_foto'] == '')
+				{
+					echo "<strong>BUKTI BELUM DIUPLOAD</strong>";
+				}
+				else 
+				{
+					?>
+					<img width="100px" width="auto" src="bukti_foto/<?= $data_users['bukti_foto']; ?>"></td>
+					<?php
+				}
+				?>
 			<td><?= $data['kode_produk']; ?></td>
 			<td><?= $data['nama']; ?></td>
 			<td><?= $data['harga']; ?></td>
@@ -108,7 +122,7 @@ if (isset($_POST['submit'])) {
 	}
 	?>
 	<tfoot>
-		<td colspan="4"></td>
+		<td colspan="5"></td>
 		<td><strong>Total</strong></td>
 		<td>Rp. <?php echo number_format($total); ?></td>
 	</tfoot>
