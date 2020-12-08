@@ -64,14 +64,14 @@ if (isset($_POST['submit'])) {
 		?>
 		<script type="text/javascript">
 			alert("Data Terupdate");
-			location="halaman=transaksi_detail&id=$Id_transaksi";
+			location="halaman=transaksi_detail&id=<?= $Id_transaksi; ?>";
 		</script>
 		<?php
 	} else {
 		?>
 		<script type="text/javascript">
 			alert("Gagal Update");
-			location="halaman=transaksi_detail&id=$Id_transaksi";
+			location="halaman=transaksi_detail&id=<?= $Id_transaksi; ?>";
 		</script>
 		<?php
 	}
