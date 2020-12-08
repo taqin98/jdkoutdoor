@@ -105,30 +105,31 @@ if (isset($_SESSION["admin"]))
 
 		//menghitung akun yang terambil
     	$num = $ambil->num_rows;
-
+      $akun = $ambil->fetch_assoc();
+      var_dump($akun);
 		//jika 1 akun yang cocok, maka diloginkan
-    	if ($num==1)
-    	{
-    		$akun = $ambil->fetch_assoc();
-    		$_SESSION["admin"] = $akun;
+   //  	if ($num==1)
+   //  	{
+   //  		$akun = $ambil->fetch_assoc();
+   //  		$_SESSION["admin"] = $akun;
     		
-    		if ($akun['level'] == 1) {
-    			# code...
-    			echo "<script>alert('anda sukses login');</script>";
-    			echo "<script>location='index.php';</script>";
+   //  		if ($akun['level'] == 1) {
+   //  			# code...
+   //  			echo "<script>alert('anda sukses login');</script>";
+   //  			echo "<script>location='index.php';</script>";
 
-    		} else {
-    			echo "Gagal";
-    		}
+   //  		} else {
+   //  			echo "Gagal";
+   //  		}
     		
 
-    	}
-    	else
-    	{
-			//anda gagal login
-    		echo "<script>alert('anda gagal login, periksa akun anda');</script>";
-    		echo "<script>location='login.php';</script>";
-    	}
+   //  	}
+   //  	else
+   //  	{
+			// //anda gagal login
+   //  		echo "<script>alert('anda gagal login, periksa akun anda');</script>";
+   //  		echo "<script>location='login.php';</script>";
+   //  	}
     }
 
     ?>
