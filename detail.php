@@ -125,16 +125,20 @@ $detail = $ambil->fetch_assoc();
           				<td colspan="3"><?php echo $detail["nama_produk"]; ?></td>
           				<td></td>
           				<td>
-                    <label>Jumlah</label>
-          						<input type="number" min="1" name="jumlah" value="1" style="width: 50%;margin: 0px 20px;">
+                    <div style="display: flex;">
+                      <label>Jumlah</label>
+                      <input type="number" min="1" name="jumlah" value="1" style="width: 50%;margin: 0px 20px;">
+                    </div>
           				</td>
           			</tr>
                 <tr>
                   <td colspan="3"></td>
                   <td></td>
                   <td>
-                    <label>Hari</label>
+                    <div style="display: flex;">
+                      <label>Hari</label>
                       <input type="number" min="1" name="hari" value="1" style="width: 50%;margin: 0px 20px;">
+                    </div>
                   </td>
                 </tr>
           			<tr>
