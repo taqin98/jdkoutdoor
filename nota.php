@@ -214,7 +214,7 @@ $data_users = $users->fetch_assoc();
         		<form method="POST" enctype="multipart/form-data">
         			<div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         				<label>Upload Bukti Pembayaran</label>
-        				<input class="mdl-textfield__input" type="file" name="bukti">
+        				<input class="mdl-textfield__input" type="file" name="bukti" required="">
         			</div>
         			<!-- Colored raised button -->
         			<input type="submit" name="submit" class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="submit">
