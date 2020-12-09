@@ -7,17 +7,17 @@ Nama		: NURUL MUTTAQIN<br>
 NIM		: A22.2016.02514<br>
 Program Studi	: Teknik Informatika - DIII
 
-FAKULTAS ILMU KOMPUTER
+FAKULTAS ILMU KOMPUTER<br>
 UNVERSITAS DIAN NUSWANTORO
 2019
 
-demo android : http://jdkoutdoor.herokuapp.com/jdk_adventure.apk
-demo admin web : http://jdkoutdoor.herokuapp.com/admin
+demo android : http://jdkoutdoor.herokuapp.com/jdk_adventure.apk <br>
+demo admin web : http://jdkoutdoor.herokuapp.com/admin <br>
 demo panduan : http://jdkoutdoor.herokuapp.com/panduan.pdf
 
-akses
-user : joni
-pass : joni
+akses<br>
+user : joni<br>
+pass : joni<br>
 
-user : admin
+user : admin<br>
 pass : admin
