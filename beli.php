@@ -18,6 +18,21 @@ else
 //print_r($_SESSION);
 //echo "</pre>";
 //larikan ke halaman keranjang
-echo "<script>alert('produk telah masuk ke keranjang belanja');</script>";
-echo "<script>location='keranjang.php';</script>";
+//echo "<script>alert('produk telah masuk ke keranjang belanja');</script>";
+//echo "<script>location='keranjang.php';</script>";
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+<script type="text/javascript">
+	swal('MASUK KERANJANG!', 'produk telah masuk ke keranjang belanja', 'success')
+	.then((value) => {
+		location='keranjang.php';
+	});
+</script>
+</body>
+</html>

@@ -125,17 +125,32 @@ require_once 'admin/config/config.php';
 			$akun = $ambil->fetch_assoc();
 			//simpan di session pelanggan
 			$_SESSION["pelanggan"] = $akun;
-			echo "<script>alert('anda sukses login');</script>";
-			
+			// echo "<script>alert('anda sukses login');</script>";
+      echo "<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>";
+      ?>
+      <script type="text/javascript">
+        swal('LOGIN!', 'Anda berhasil Login!', 'success')
+        .then((value) => {
+          <?php
+          if (isset($_SESSION["keranjang"]) OR !empty($_SESSION["keranjang"])) {
+            echo "location='checkout.php';";
+          } else {
+           echo "location='index.php';";
+          }
+          ?>
+        });
+      </script>
+      <?php
+
 			//jika sudah belanja
-			if (isset($_SESSION["keranjang"]) OR !empty($_SESSION["keranjang"]))
-			{
-				echo "<script>location='checkout.php';</script>";
-			}
-			else
-			{
-				echo "<script>location='index.php';</script>";
-			}
+			// if (isset($_SESSION["keranjang"]) OR !empty($_SESSION["keranjang"]))
+			// {
+			// 	echo "<script>location='checkout.php';</script>";
+			// }
+			// else
+			// {
+			// 	echo "<script>location='index.php';</script>";
+			// }
 			
 		}
 		else
@@ -151,5 +166,6 @@ require_once 'admin/config/config.php';
       </main>
     </div>
     <script src="assets/js/material.min.js"></script>
+    
   </body>
 </html>

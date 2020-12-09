@@ -2,13 +2,6 @@
 session_start();
 //koneksi ke database
 include 'admin/config/config.php';
-if(empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
-{
-	echo "<script>alert('Keranjang Kosong, silahkan berbelanja dulu');</script>";
-	echo "<script>location='index.php';</script>";
-  ?>
-  <?php
-}
 ?>
 <!doctype html>
 <html lang="en">
@@ -57,6 +50,23 @@ if(empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
     </style>
   </head>
   <body>
+    <?php
+    error_reporting(0);
+    if(empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
+    {
+      echo "<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>";
+      // echo "<script>alert('Keranjang Kosong, silahkan berbelanja dulu');</script>";
+      // echo "<script>location='index.php';</script>";
+      ?>
+      <script type="text/javascript">
+        swal('KERANJANG KOSONG!', 'silahkan berbelanja dulu', 'info')
+        .then((value) => {
+          location='index.php';
+        });
+      </script>
+      <?php
+    }
+    ?>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
