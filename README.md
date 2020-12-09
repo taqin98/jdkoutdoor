@@ -2,9 +2,9 @@
 
 Program ini hasil dari kuliah kerja praktek II pada program studi Teknik Informatika - DIII Fakultas Ilmu Komputer Universitas Dian Nuswantoro Semarang
 
-Oleh :
-Nama		: NURUL MUTTAQIN
-NIM		: A22.2016.02514
+Oleh :<br>
+Nama		: NURUL MUTTAQIN<br>
+NIM		: A22.2016.02514<br>
 Program Studi	: Teknik Informatika - DIII
 
 FAKULTAS ILMU KOMPUTER
